@@ -1,1 +1,1 @@
-# Angular4 image slider with pure css3 and htlm5
+# Refrence code
