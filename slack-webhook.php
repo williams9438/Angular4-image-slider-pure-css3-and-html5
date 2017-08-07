@@ -21,13 +21,13 @@ function slackChannel(){
     );
 
 		
-		$data = array(
-            'channel'     => $channel,
-            'username'    => $bot_name,
-            'text'        => $message,
-            'icon_emoji'  => $icon,
-            'attachments' => $attachments
-    );
+	$data = array(
+		'channel'     => $channel,
+		'username'    => $bot_name,
+		'text'        => $message,
+		'icon_emoji'  => $icon,
+		'attachments' => $attachments
+	);
     $data_string = json_encode($data);
 		$ch = curl_init('https://hooks.slack.com/servihttps://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX');  
 		curl_setopt($ch, CURLOPT_POST, true);
