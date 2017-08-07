@@ -28,19 +28,19 @@ function slackChannel(){
 		'icon_emoji'  => $icon,
 		'attachments' => $attachments
 	);
-    $data_string = json_encode($data);
-		$ch = curl_init('https://hooks.slack.com/servihttps://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX');  
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-			'Content-Type: application/json',                                                                                
-			'Content-Length: ' . strlen($data_string))                                                                       
-		); 
-		   
-	 	$return = curl_exec($ch);
-		
-		print_r($return);
-		curl_close($ch);
-	}
+	$data_string = json_encode($data);
+	$ch = curl_init('https://hooks.slack.com/servihttps://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX');  
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+		'Content-Type: application/json',                                                                                
+		'Content-Length: ' . strlen($data_string))                                                                       
+	); 
+
+	$return = curl_exec($ch);
+
+	print_r($return);
+	curl_close($ch);
+}
